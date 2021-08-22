@@ -17,7 +17,7 @@ The following images illustrate the processing describe here.
 
 ![Composite of Autumn Image: Inputs and Outputs](Documents/Images/Autumn_composite.jpg?raw=true)
 
-![Composite of Flowers Image: Inputs and Outputs](Documents/Images/Flowers3_composite.jpg?raw=true)
+![Composite of Flowers Image: Inputs and Outputs](Documents/Images/Flowers_composite.jpg?raw=true)
 
 An executable for the 'Further Enhanced-Image-Colour-Transfer' processing  is available here.
 https://github.com/TJCoding/Image-Colour-Transfer-Processing-Executable
