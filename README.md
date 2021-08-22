@@ -21,7 +21,7 @@ The following images illustrate the processing describe here.
 
 ![Composite of Flowers Image: Inputs and Outputs](Documents/Images/Flowers_composite.jpg?raw=true)
 
-A web app implementing these methods is available[here](https://www.dustfreesolutions.com/CT/CT.html).
+A web app implementing these methods is available [here](https://www.dustfreesolutions.com/CT/CT.html).
 
 An executable for the 'Further Enhanced-Image-Colour-Transfer' processing  is available [here](https://github.com/TJCoding/Image-Colour-Transfer-Processing-Executable).
 
