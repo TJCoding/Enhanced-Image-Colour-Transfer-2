@@ -1,0 +1,91 @@
+OPTION 1: CrossCovarianceLimit
+ There is an option to match the cross correlation between the colour channels of the target
+ image to the correlation within the palette image. Full matching, no matching or restricted 
+ matching may be specified.
+   Set CrossCovarianceLimit to 0.0 to inhibit cross covariance processing.
+   Set CrossCovarianceLimit to 1.0 for full cross covariance processing.
+   Set to an intermediate value for intermediate processing.
+   (See the note at the end of this file for further information.)
+
+
+OPTION 2: PercentShadingShift
+ There is an option to retain the shading of the target image so that the processing is 
+ implemented as a pure colour transfer or to adopt the shading of the palette image 
+ or to select an intermediate shading.
+   Set percent shading shift to 100 for shading consistent with the palette image.
+   Set percent shading shift to 0 to retain the target image shading.
+   Set to an intermediate value for intermediate shading.
+   Values outside the range 0.0-100.0 are permissible!
+
+
+OPTION 3: ReshapingIterations
+ There is an option to further match the distribution of the target image colour channels 
+ to the corresponding palette image colour channels by iteratively adjusting the 
+ characteristics over and above the basic processing sequence.  The number of 
+ iterative adjustments can be specified for this 'reshaping' option. 
+   Set the number of reshaping iterations to 0 for no reshaping processing.
+   Set the number of reshaping iterations to 1 for a single rehaping iteration.
+   Set the number of reshaping iterations to 'n' for 'n' reshaping iterations.
+
+
+OPTION 4: PercentTint
+ There is an option to modify the colour tint of the final image.
+   Set percentage tint to 100.0 for a full colour image.
+   Set percentage tint to 0.0 for a greyscale image.
+   Set to an intermediate value for intermediate tint.
+   Values outside the range 0.0-100.0 are permissible!
+
+
+OPTION 5: PercentModified 
+ There is an option to mix the final image with the initial image,
+ so that only part modification occurs.
+   Set percentage modification to 100 to achive the full processing outcome.
+   Set percentage modification to 0 to retain the target image in full.
+   Set to an intermediate value for intermediate modification.
+   Values outside the range 0.0-100.0 are permissible!
+
+
+OPTION 6: PercentSaturationShift
+ There is an option to pare back excess colour saturation resulting from the 
+ colour transfer processing.
+   Set percent saturation shift to 100% for no paring back.
+   Set percent saturation shift to 0% for full paring back.
+   Set to an intermediate value for an intermediate degree of paring back.
+   Set to '-1' for automatic parameter selection.
+   Values above 100.0 are permissible!
+
+
+OPTION 7: ExtraShading
+ There is an option to further adjust the shading of the output image to match 
+ the target image, the palette image or an intermediate image 
+ (as selected under Option 2) by directly matching distributions in the 
+ corresponding grey shade images.
+   Set additional shading processing to 'ON' for enhanced shading processing.
+   Set  additional shading processing to 'OFF' to revert to simple shading
+
+
+
+** PROCESSING PRECEDENCE **
+   PercentageTint is implemented first then PercentModified.
+
+** REINHARD PROCESSING
+   For standard Reinhard processing the parameters should be 0.0, 100, 0, 100.0, 100.0, 100.0, 100.0, OFF.  
+
+** NOTE ON CROSS CORRELATION PROCESSING  **
+   Cross correlation matching is performed by operations of the form.
+   Channel_a = W1*Channel_a + W2*Channel_b
+   Channel_b = W1*Channel_b + W2*Channel_a
+   as determined by the value of CrossCovarianceLimit.
+
+   If CrossCovarianceLimit = 0, W2=0 and no cross correlation
+   matching is performed.
+   If CrossCovarianceLimit > 0, W2 is clipped if necessary so
+   that it cannot lie outside the range
+   -CrossCovarianceLimit*W1 to +CrossCovarianceLimit*W1.
+   This mechanism may be used to guard against an overly large
+   correction term.
+   Typically CrossCovarianceLimit might be set to 0.5
+   (for a maximum modification corresponding to 50%).
+
+
+FOR MORE DETAILS SEE.  https://github.com/TJCoding/Enhanced-Image-Colour-Transfer-2
