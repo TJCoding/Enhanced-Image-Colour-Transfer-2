@@ -61,15 +61,38 @@ OPTION 7: ExtraShading
  (as selected under Option 2) by directly matching distributions in the 
  corresponding grey shade images.
    Set additional shading processing to 'ON' for enhanced shading processing.
-   Set  additional shading processing to 'OFF' to revert to simple shading
+   Set  additional shading processing to 'OFF' to revert to simple shading.
 
+
+
+
+** ZERO PARAMETER SETTINGS: A SUMMARY **
+   Setting CrossCovarianceLimit to 0.0 inhibits cross covariance processing.
+   Setting PercentShadingShift to 0, retains the target image shading.
+   Setting ReshapingIterations to 0, inhibits reshaping processing.
+   Setting PercentTint to '0', gives a monochrome image.
+   Setting PercentModified to '0', retains the target image in full.
+   Setting PercentSaturationShift to 0, retains the target image saturation.
+   Setting ExtraShading to 'OFF' reverts to simple shading.
+
+
+** OTHER PARAMETER SETTINGS: A SUMMARY **
+   For each of the percentage parameters, defined above, a setting of '100'
+   allows the full processing effect. Intermediate values give an intermediate 
+   outcome.  Percentages below '0' or above '100' are permitted although the 
+   outcome may not always be pleasing. (See note above for saturation shift.)
+   Where, for example, the shading of the palette image is similar to that of
+   the target image, then processing will have little effect on shading and the
+   value of PercentShadingShift is of little consequence.
 
 
 ** PROCESSING PRECEDENCE **
    PercentageTint is implemented first then PercentModified.
 
+
 ** REINHARD PROCESSING
-   For standard Reinhard processing the parameters should be 0.0, 100, 0, 100.0, 100.0, 100.0, 100.0, OFF.  
+   For standard Reinhard processing the parameters should be 0.0, 100, 0, 100.0, 100.0, 100.0, 100.0, OFF. 
+ 
 
 ** NOTE ON CROSS CORRELATION PROCESSING  **
    Cross correlation matching is performed by operations of the form.
