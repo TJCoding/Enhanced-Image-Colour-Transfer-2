@@ -1,0 +1,8 @@
+Copyright T E Johnson 11/11/2021
+
+Commercial applications making use of this library should observe the following conditions.  The use of the library should be acknowledged including a cross reference to this repository and an attribution to T E Johnson.
+
+These conditions may be open to modification on an individual basis by agreement with T E Johnson.
+
+
+
