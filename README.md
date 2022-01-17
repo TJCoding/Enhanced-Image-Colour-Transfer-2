@@ -3,7 +3,7 @@
 
 __A Further Enhanced Implementation of the Colour Transfer Method proposed by E Reinhard et al.__
 
-***This repository is supported by a web app and by executable code. See details below.***
+***This repository is supported by a web app, a Medium article and by executable code. See details below.***
 
 A further revised version of the standard basic processing method is proposed which utilises image representation in the l-alpha-beta  colour space and which supersedes the Enhanced Method described [here](https://github.com/TJCoding/Enhanced-Image-Colour-Transfer). As with the basic processing, account is taken of the the mean and standard deviation values of the respective l-alpha-beta components but, in addition, the correlation between the 'alpha' and 'beta' colour components is adddressed. Additional new options allow for the matching of higher moments of the colour components beyond the second moments, for the adjustment of image saturation and for the implementation of flexible image shading options.  The processing is described further in the file '[Enhanced Image-Colour-Transfer.pdf](Documents/Further%20Enhanced%20Image-Colour-Transfer.pdf)'  in the 'Documents' sub-folder. 
 
@@ -22,6 +22,8 @@ The following images illustrate the processing describe here.
 ![Composite of Flowers Image: Inputs and Outputs](Documents/Images/Flowers_composite.jpg?raw=true)
 
 A web app implementing these methods is available [here](https://www.dustfreesolutions.com/CT/CT.html).
+
+A Medium article discussing these methods is available [here](https://medium.com/@terence.johnson/a-free-touse-web-app-for-image-colour-transfer-processing-9f5b06c760f4).
 
 An executable for the 'Further Enhanced-Image-Colour-Transfer' processing  is available [here](https://github.com/TJCoding/Image-Colour-Transfer-Processing-Executable).
 
