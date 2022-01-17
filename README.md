@@ -27,5 +27,5 @@ A Medium article discussing these methods is available [here](https://medium.com
 
 An executable for the 'Further Enhanced-Image-Colour-Transfer' processing  is available [here](https://github.com/TJCoding/Image-Colour-Transfer-Processing-Executable).
 
-*Please star this respository if you find either of these facilities to be commendable.*
+*Please star this respository if you find any of these facilities to be commendable.*
 
