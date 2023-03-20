@@ -2,7 +2,7 @@
 //*** OF THE REINHARD COLOUR TRANSFER METHOD.
 //    See 'main' routine for further details.
 //
-// Copyright © Terry Johnson, January 2020
+// Copyright Â© Terry Johnson, January 2020
 // Revised 27/05/2021 (Version 5)
 // https://github.com/TJCoding
 
@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
     cv::cvtColor(sourcef,sourcef,CV_BGR2GRAY); // Only need mono hereafter.
 
     // Implement image refinements where a change is specified.
-    SaturationProcessing(targetf, savedtf,
+    targetf=SaturationProcessing(targetf, savedtf,
                          PercentSaturationShift/100.0);
     targetf=FullShading(targetf, savedtf, sourcef, ExtraShading,
                         PercentShadingShift/100.0);
