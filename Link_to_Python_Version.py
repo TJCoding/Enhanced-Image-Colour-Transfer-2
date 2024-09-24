@@ -3,6 +3,8 @@
 # https://github.com/minh-nguyenhoang/Enhanced-Image-Colour-Transfer-2
 # 
 # Look for 'enhance 2.py'
+#
+# Alternatively run the code below.
 
 import webbrowser
 
